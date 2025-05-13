@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>829</width>
+    <height>1030</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #000000;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QTabWidget {
+    color: #ffffff;            /* Text color for the entire widget */
+    font-size: 16px;           /* Font size for the entire widget */
+    border:none;
+}
+
+QTabBar::tab {
+    background-color: #826890;    /* Background color for tab labels */
+    color: #ffffff;            /* Text color for tab labels */
+    font-size: 16px;           /* Font size for tab labels */
+    border-radius: 10px;       /* Rounded corners for tab labels */
+    padding: 10px;             /* Optional: padding for better appearance */
+}
+
+QTabBar::tab:selected {
+    background-color: #4c3d54; /* Background color for the selected tab */
+    border-radius: 10px;        /* Maintain rounded corners for the selected tab */
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="harris_tab">
+       <property name="styleSheet">
+        <string notr="true"> /*</string>
+       </property>
+       <attribute name="title">
+        <string>Face Recognizer</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QFrame" name="frame_25">
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>700</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #2d282c; /* Background color */
+    border-radius: 15px; /* Curved borders */
+    border: 2px solid #ffffff; /* 3D outline */
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 3D shadow effect */</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_34">
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <item row="0" column="1">
+              <layout class="QVBoxLayout" name="verticalLayout_75">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_46">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 15px;
+border: none;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Input Image</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_37">
+                 <property name="styleSheet">
+                  <string notr="true">/* Line style */
+
+  /* Set the width of the line */
+  width: 20px;
+
+  /* Set the height of the line */
+  height: 5px;
+
+  /* Set the background color of the line */
+  background-color:#a8abaf;
+
+  /* Set the border of the line */
+  border: 10px;
+
+  /* Set the border radius of the line */
+  border-radius:5px;
+
+
+
+
+</string>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_45">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_76" stretch="0,5">
+                   <item>
+                    <spacer name="horizontalSpacer_17">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="input" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>270</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>600</width>
+                       <height>700</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 1px solid #ffffff;
+background-color: #1f1f1f;</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="1">
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="label1">
+                   <property name="styleSheet">
+                    <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 13px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Components num:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="componentLabel">
+                   <property name="styleSheet">
+                    <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 13px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_54">
+                 <property name="spacing">
+                  <number>3</number>
+                 </property>
+                 <item>
+                  <widget class="QSlider" name="componentSlider">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QSlider{
+border: none;
+}
+QSlider::groove {
+background: #f0f0f0; /* Color of the track */
+border: 0px solid #ffffff; /* Border of the track */
+height: 5px; /* Set the height of the track */
+border-radius: 1px; /* Round the corners of the track */
+}
+
+/* Style for the slider handle (thumb) */
+QSlider::handle {
+background: #826890; /* Color of the handle */
+width: 20px; /* Width of the handle */
+height: 10px; /* Height of the handle */
+margin: -5px 0; /* Negative margin to center the handle vertically */
+border-radius: 4px;
+ border: 1px solid #826890;
+}
+
+/* Style for the slider handle when pressed */
+QSlider::handle:pressed {
+background: #584662; /* Color of the handle when pressed */
+border: 1px solid #584662; /* Border of the handle when pressed */
+}</string>
+                   </property>
+                   <property name="maximum">
+                    <number>200</number>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="applyButton">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #826890;
+  border-radius: 10px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+font-size:17px;
+      color: white;
+   
+     border: none;
+padding-top:5px;
+padding-bottom:5px;
+font-weight:bold;
+
+
+}
+QPushButton:hover {
+    background-color: #695474;    /* Slightly lighter blue when hovering */
+}
+
+QPushButton:pressed {
+    background-color: #4d3d55;    /* Darker blue when pressed */
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Apply</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_24">
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>700</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #2d282c; /* Background color */
+    border-radius: 15px; /* Curved borders */
+    border: 2px solid #ffffff; /* 3D outline */
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 3D shadow effect */</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_33">
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <item row="0" column="1">
+              <layout class="QVBoxLayout" name="verticalLayout_73">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_45">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 15px;
+border: none;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Output1</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_36">
+                 <property name="styleSheet">
+                  <string notr="true">/* Line style */
+
+  /* Set the width of the line */
+  width: 20px;
+
+  /* Set the height of the line */
+  height: 5px;
+
+  /* Set the background color of the line */
+  background-color:#a8abaf;
+
+  /* Set the border of the line */
+  border: 10px;
+
+  /* Set the border radius of the line */
+  border-radius:5px;
+
+
+
+
+</string>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_44">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_74" stretch="0,5">
+                   <item>
+                    <spacer name="horizontalSpacer_16">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="output1" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>270</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>600</width>
+                       <height>700</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 1px solid #ffffff;
+background-color: #1f1f1f;</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="feature_matching_tab">
+       <attribute name="title">
+        <string>Performace and ROC Curve</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QFrame" name="frame_33">
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>700</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #2d282c; /* Background color */
+    border-radius: 15px; /* Curved borders */
+    border: 2px solid #ffffff; /* 3D outline */
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 3D shadow effect */</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_38">
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <item row="0" column="1">
+              <layout class="QVBoxLayout" name="verticalLayout_87">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_49">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 15px;
+border: none;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>ROC Curve</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_41">
+                 <property name="styleSheet">
+                  <string notr="true">/* Line style */
+
+  /* Set the width of the line */
+  width: 20px;
+
+  /* Set the height of the line */
+  height: 5px;
+
+  /* Set the background color of the line */
+  background-color:#a8abaf;
+
+  /* Set the border of the line */
+  border: 10px;
+
+  /* Set the border radius of the line */
+  border-radius:5px;
+
+
+
+
+</string>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_49">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_88" stretch="0,5">
+                   <item>
+                    <spacer name="horizontalSpacer_47">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="rocCurve" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>270</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>600</width>
+                       <height>700</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 1px solid #ffffff;
+background-color: #1f1f1f;</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_35">
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>700</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #2d282c; /* Background color */
+    border-radius: 15px; /* Curved borders */
+    border: 2px solid #ffffff; /* 3D outline */
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 3D shadow effect */</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_40">
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <item row="0" column="1">
+              <layout class="QVBoxLayout" name="verticalLayout_89">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_51">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 15px;
+border: none;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Confusion Matrix</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_42">
+                 <property name="styleSheet">
+                  <string notr="true">/* Line style */
+
+  /* Set the width of the line */
+  width: 20px;
+
+  /* Set the height of the line */
+  height: 5px;
+
+  /* Set the background color of the line */
+  background-color:#a8abaf;
+
+  /* Set the border of the line */
+  border: 10px;
+
+  /* Set the border radius of the line */
+  border-radius:5px;
+
+
+
+
+</string>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_50">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_90" stretch="0,5">
+                   <item>
+                    <spacer name="horizontalSpacer_20">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="confusionMatrix" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>270</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>600</width>
+                       <height>700</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 1px solid #ffffff;
+background-color: #1f1f1f;</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+background-color: #1f1f1f;
+    font-weight: bold;
+    border: 2px solid #ffffff; /* 3D outline */
+border-radius: 10px;
+}
+QGroupBox::title {
+    color: white;
+    font-weight: bold;
+}
+background-color: #784B84;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+     border: 1.2px solid white;
+border-style: outset;
+border-radius: 10px;</string>
+          </property>
+          <property name="title">
+           <string>Classification Report and Accuracy</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_15">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Precision :</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="Precision">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_17">
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Recall : </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="recall">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_14">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_20">
+               <item>
+                <widget class="QLabel" name="label_8">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>F1-score : </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="f1score">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_15">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_21">
+               <item>
+                <widget class="QLabel" name="label_9">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Accuracy : </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="accuracy">
+                 <property name="styleSheet">
+                  <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 17px;
+border: none;
+background-color: #1f1f1f;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>829</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
